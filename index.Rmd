@@ -4,7 +4,7 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: cosmo
 ---
 
 # This is Jeff's awesome website
@@ -14,7 +14,7 @@ output:
 You can add text!
 
 Here is a [link](https://www.google.com/) to google!
-Here is a link to the [about](html.about) page!
+Here is a link to the [about](about.html) page!
 
 
 You can still use R!
