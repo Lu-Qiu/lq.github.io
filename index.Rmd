@@ -41,3 +41,7 @@ plot_df |>
 My cat is ted. This is ted:
 
 ![](images/ted.jpg)
+
+# Other stuff on this page
+
+Here is a link to the [plotly](plotly.html) page!
