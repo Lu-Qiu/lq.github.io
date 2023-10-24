@@ -45,3 +45,5 @@ My cat is ted. This is ted:
 # Other stuff on this page
 
 Here is a link to the [plotly](plotly.html) page!
+
+Here is a [dashboard](dashboard.html)!
