@@ -1,5 +1,5 @@
 ---
-title: "Instacart"
+title: "NYC Restaurant Inspections"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -19,29 +19,46 @@ library(p8105.datasets)
 data("rest_inspec")
 ```
 
+```{r}
+rest_inspec = 
+  rest_inspec |> 
+  select(camis, borough = boro, 
+         cuisine_description, score, grade) |> 
+  drop_na(score) |>
+  filter(borough != 'Missing')
+```
+
+
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Items ordered in each aisle (Items > 15000)
+### Violin Plot of Score by Cuisine
 
 ```{r}
-
-  
+rest_inspec |>
+  plot_ly(x = ~cuisine_description, y = ~score, color = ~cuisine_description, type = "violin", colors = "viridis") 
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Bar Plot of Restaurants in Each Borough
 
 ```{r}
-
+rest_inspec |>
+  group_by(borough) |>
+  summarise(restaurant_number = length(borough)) |>
+  mutate(borough = fct_reorder(borough, restaurant_number)) |> 
+  plot_ly(
+    x = ~borough, y = ~restaurant_number, color = ~borough,
+    type = "bar", colors = "viridis")
 ```
 
-### Chart C
+### Box Plot of Score by borough
 
 ```{r}
-
+rest_inspec |>
+  plot_ly(y = ~score, color = ~borough, type = "box", colors = "viridis")
 ```
 
