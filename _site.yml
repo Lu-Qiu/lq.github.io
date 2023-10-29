@@ -1,20 +1,19 @@
-name: "Yay internet!"
+name: "My Website"
 output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
-    - text: "Projects"
-      href: projects.html
-    - text: "Plotly"
-      href: plotly.html
+    - text: "Resume"
+      href: resume.html
     - text: "Dashboard"
       href: dashboard.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<qiuluscut@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/lu-qiu/
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/lu-qiu-1a5b78207/
+    
 output:
   html_document:
     theme: cosmo

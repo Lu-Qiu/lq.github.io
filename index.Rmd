@@ -1,5 +1,5 @@
 ---
-title: "My awesome website"
+title: "Welcome!"
 output: 
   html_document:
     toc: true
@@ -7,43 +7,17 @@ output:
     theme: cosmo
 ---
 
-# This is Jeff's awesome website
+My name is Lu Qiu, a first-year MS Biostatistics student at Columbia University. This is my personal website created for P8105 Homework 4.
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+This website contains:
 
-You can add text!
-
-Here is a [link](https://www.google.com/) to google!
-Here is a link to the [about](about.html) page!
-
-
-You can still use R!
-
-```{r}
-library(tidyverse)
-
-plot_df = 
-  tibble(
-    x = runif(100),
-    y = 1 + 2*x +rnorm(100)
-  )
-
-plot_df |>
-  ggplot(aes(x = x, y = y)) +
-  geom_point()
-  
-
-```
+* A brief introductory landing page
+* A [resume](resume.html) page
+* A flexdashboard using the NY NOAA dataset
+* Links in the site navigation for my GitHub account, your email, and LinkedIn
 
 
-## Here's a new section
 
-My cat is ted. This is ted:
+Here is a [link](https://github.com/Lu-Qiu/lu-qiu.github.io) to the code for creating this website.
 
-![](images/ted.jpg)
 
-# Other stuff on this page
-
-Here is a link to the [plotly](plotly.html) page!
-
-Here is a [dashboard](dashboard.html)!
