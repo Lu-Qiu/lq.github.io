@@ -13,7 +13,7 @@ This website contains:
 
 * A brief introductory landing page
 * A [resume](resume.html) page
-* A flexdashboard using the NY NOAA dataset
+* A flexdashboard using the NYC Restaurant Inspections dataset
 * Links in the site navigation for my GitHub account, your email, and LinkedIn
 
 

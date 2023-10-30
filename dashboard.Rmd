@@ -29,15 +29,25 @@ rest_inspec =
 ```
 
 
-
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Violin Plot of Score by Cuisine
+### Pie Plot of Top 6 Cuisines of Restaurants in NYC
+
 
 ```{r}
 rest_inspec |>
-  plot_ly(x = ~cuisine_description, y = ~score, color = ~cuisine_description, type = "violin", colors = "viridis") 
+  group_by(cuisine_description) |>
+  summarise(restaurant_number = length(cuisine_description)) |>
+  arrange(desc(restaurant_number)) |>
+  head(6) |>
+  plot_ly(
+    labels = ~cuisine_description, values = ~restaurant_number) |>
+  add_pie(hole = 0.5) |>
+  layout(
+    legend = list(x = 1, y = 0.5)
+  ) 
+  
 ```
 
 Column {data-width=350}
@@ -55,7 +65,7 @@ rest_inspec |>
     type = "bar", colors = "viridis")
 ```
 
-### Box Plot of Score by borough
+### Box Plot of Score by Borough
 
 ```{r}
 rest_inspec |>
