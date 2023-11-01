@@ -33,7 +33,7 @@ This website contains:
 * A brief introductory landing page
 * A [resume](resume.html) page
 * A flexdashboard using the NYC Restaurant Inspections dataset
-* Links in the site navigation for my GitHub account, your email, and LinkedIn
+* Links in the site navigation for my email, GitHub account, and LinkedIn
 
 
 Here is a [link](https://github.com/Lu-Qiu/lu-qiu.github.io) to the code for creating this website.
